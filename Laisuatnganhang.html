@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="loan">Vốn</label>
+    <br>
+    <input type="text" id="loan" name="loan" value="5000000">
+    <br>
+    <label for="rate">Lãi suất</label>
+    <br>
+    <input type="text" id="rate" name="rate" value="6.9">
+    <br>
+    <label for="n">Số năm</label>
+    <br>
+    <input type="text" id="n" name="n" value="2">
+    <br>
+    <button onclick="interestRate()">Kết quả</button>
+    <br>
+    <br>
+    <div id="output"></div>
+</body>
+<script>
+    function interestRate() {
+        let loan = Number(document.getElementById("loan").value);
+        let rate = Number(document.getElementById("rate").value);
+        let n = Number(document.getElementById("n").value);
+        document.getElementById("output").innerHTML = loan + n * loan * rate / 100;
+    }
+</script>
+</html>
